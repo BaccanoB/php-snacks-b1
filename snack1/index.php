@@ -20,9 +20,10 @@
         ]
     ]; 
 
-    for ($i=0; $i < count($matches); $i++) { 
-        $teams = $matches[$i]['homeTeam']."-".$matches[$i]['awayTeam'];
-        $points = $matches[$i]['homeTeamPoints']."-".$matches[$i]['awayTeamPoints'];
+    for ($i=0; $i < count($matches); $i++) {
+        $match = $matches[$i];
+        $teams = $match['homeTeam']."-".$match['awayTeam'];
+        $points = $match['homeTeamPoints']."-".$match['awayTeamPoints'];
         echo $teams." | ".$points."<br>";
     }
 
