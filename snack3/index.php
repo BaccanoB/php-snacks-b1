@@ -1,16 +1,11 @@
 <?php 
-    $i;
-    while($i < 15){
-        for ($i=0; $i<15; $i++) { 
-            $number = rand(1,50);
-
-            if(!in_array($number,$numbers)){
-                $numbers[]=$number;
-            }
+    $numbers=[];
+    while(count($numbers) < 15){
+        $number = rand(1,50);
+        if(!in_array($number,$numbers)){
+            $numbers[]=$number;
         }
-
-        $i++;
-    };
-
+    }
+    var_dump($numbers);
     print_r($numbers);
     ?>
